@@ -1,11 +1,8 @@
 package game;
 import java.util.Scanner;
 import java.util.Random;
-import java.util.InputMismatchException;
 
 public class TakePinsGame {
-	public static Scanner scanner = new Scanner(System.in);
-	
 	public static void main(String[] args) {
 		Board board = new Board();
 		board.setUp(10);
@@ -17,32 +14,27 @@ public class TakePinsGame {
 		
 		while (board.noPins > 0) {
 			int y;
-			Integer x;
-			System.out.println("How many pins do you want to take?(1 or 2) or face the endless wrath of MökMonstret: \n > ");
-			//String string = scanner.nextLine();
-			x = scanner.nextInt();
-			if ((x.getClass().getName()) != ("java.lang.Integer")) {
-				
+			//* int x */
+			System.out.print("How many pins do you want to take?(1 or 2) or face the endless wrath of MökMonstret: \n> ");
+			Scanner scanner = new Scanner(System.in);
+			String input = scanner.nextLine();
+			int number = 0;
+
+			while (true) {
+				try {
+					number = Integer.parseInt(input);
+					break; 
+				} catch (Exception e) {
+					System.out.println("Invalid data type");
+				}
+				System.out.print("How many pins do you want to take?(1 or 2) or face the endless wrath of MökMonstret: \n> ");
+				input = scanner.nextLine();
 			}
 			
-			human.takePins(board, x);
+			human.takePins(board, number);
 			y = rand.nextInt(2) + 1;
 			computer.takePins(board, y);
 		}
 		System.out.println("Game Over!");
 	}
-//	public static int getUserInput() {
-//		int choice = 0; 
-//		
-//		try {
-//			System.out.println("How many pins do you want to take?(1 or 2) or face the endless wrath of MökMonstret: \n > ");
-//			choice = scanner.nextInt();
-//		}
-//		catch (InputMismatchException e) {
-//			System.out.println("Invalid input, please enter an integer: ");
-//		}
-//		getUserInput();
-//		return choice; 
-//	}
-	
 }
