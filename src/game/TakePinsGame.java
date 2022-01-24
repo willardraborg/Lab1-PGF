@@ -16,7 +16,7 @@ public class TakePinsGame {
 		outerloop:
 		while (true) {
 			int y;
-			JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret: \n> ");
+			JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret: ");
 			String input = JOptionPane.showInputDialog(null, "Gimme pins");
 			int x = 0;
 
@@ -42,7 +42,7 @@ public class TakePinsGame {
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, "Invalid data type. Try again. \n");
 				} 
-				JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret: \n> ");
+				JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret: ");
 				input = JOptionPane.showInputDialog(null, "");
 			}
 
