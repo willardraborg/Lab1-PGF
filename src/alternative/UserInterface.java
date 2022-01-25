@@ -8,10 +8,7 @@ public class UserInterface {
     } 
 
     /**
-    * Visar en dialogruta med texten msg och och läser in ett positivt heltal. Om
-    * användaren skriver något som inte kan tolkas som ett positivt heltal ska -1
-    * returneras. Om användaren klickar på "Avbryt" ska -2 returneras.
-    * Metoden ShowInpoutDialog returnerar null i så fall
+    * Visar en dialogruta med texten msg och och läser in ett positivt heltal. Error fixing.
     */
     public static int askForInt(String msg) {
         String input = JOptionPane.showInputDialog(null, msg);
