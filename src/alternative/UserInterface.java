@@ -26,9 +26,7 @@ public class UserInterface {
                 x = Integer.parseInt(input);
                 if (1 > x || x > 2) {
                     JOptionPane.showMessageDialog(null, "Chosen amount of pins is incorrect. MökMonstret is coming for you...");
-                } 
-                
-                else {
+                } else {
                     break; 
                 }
             } catch (Exception e) {

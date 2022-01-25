@@ -20,7 +20,6 @@ public class TakePinsGame {
 			//System.out.println("human chose TakePinsGame:" + x);
 			human.takePins(board, x);
 		    computer.takePins(board, y);
-
 		}
 	}
 }

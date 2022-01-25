@@ -6,16 +6,13 @@ public class HumanPlayer extends Player{
 	  
   }
   public int takePins(Board b, int t) {
-    while (true) {
-      if (b.noPins - t <= 0) {
-        JOptionPane.showMessageDialog(null, "computer won!");
-        Runtime.getRuntime().halt(0);
-        //System.exit(0);
-      }
-      //System.out.println("Human chose HumanPlayer" + x);
-      b.takePins(t);
-      break;
-	  }
+    if (b.noPins - t <= 0) {
+      JOptionPane.showMessageDialog(null, "computer won!");
+      Runtime.getRuntime().halt(0);
+      //System.exit(0);
+    }
+    //System.out.println("Human chose HumanPlayer" + x);
+    b.takePins(t);
     return b.noPins;
   }
 
