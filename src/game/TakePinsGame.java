@@ -5,6 +5,9 @@ import javax.swing.JOptionPane;
 
 public class TakePinsGame {
 	public static void main(String[] args) {
+		//String select_game_type = JOptionPane.showInputDialog(null, "Turtle or HumanPlayer() against computer?");
+
+		JOptionPane.showMessageDialog(null, "Human Råbert will now play a game of pins against the robot Råbot.");
 		Board board = new Board();
 		board.setUp(10);
 		Player human = new HumanPlayer();
@@ -16,7 +19,7 @@ public class TakePinsGame {
 		outerloop:
 		while (true) {
 			int y;
-			JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret: ");
+			JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret! ");
 			String input = JOptionPane.showInputDialog(null, "Gimme pins");
 			int x = 0;
 
@@ -42,7 +45,7 @@ public class TakePinsGame {
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, "Invalid data type. Try again. \n");
 				} 
-				JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret: ");
+				JOptionPane.showMessageDialog(null, "How many pins do you want to take? (1 or 2) or face the endless wrath of MökMonstret! ");
 				input = JOptionPane.showInputDialog(null, "");
 			}
 
