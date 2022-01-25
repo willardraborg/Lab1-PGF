@@ -14,8 +14,8 @@ public class ComputerPlayer extends Player {
 
 		if (b.noPins - y <= 0) {
 			JOptionPane.showMessageDialog(null, "human won!");
-			Runtime.getRuntime().halt(0);
-			//System.exit(0);
+			//Runtime.getRuntime().halt(0);
+			System.exit(0);
 		}
 		b.takePins(y);
 		//System.out.println(b.noPins);
