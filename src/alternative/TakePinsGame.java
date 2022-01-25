@@ -8,7 +8,7 @@ public class TakePinsGame {
 		JOptionPane.showMessageDialog(null, "human will now play a game of pins against computer.");
 		Board board = new Board();
 		board.setUp(10);
-		Player human = new HumanPlayer();
+		HumanPlayer human = new HumanPlayer();
 		human.Player("human");
 		ComputerPlayer computer = new ComputerPlayer();
 		computer.Player("computer");
