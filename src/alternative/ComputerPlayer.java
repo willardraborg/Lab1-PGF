@@ -7,7 +7,7 @@ public class ComputerPlayer extends Player {
 	public void ComputerPlayer(String s) {
 		  
 	}
-	public int takePins(Board b, int y) {
+	public void takePins(Board b, int y) {
 		Random rand = new Random();
 		y = rand.nextInt(2) + 1;
 		//System.out.println("computer chose ComputerPlayer: " + y);
@@ -19,6 +19,6 @@ public class ComputerPlayer extends Player {
 		}
 		b.takePins(y);
 		//System.out.println(b.noPins);
-		return b.noPins;
+		//return b.noPins;
 	}
 }

@@ -13,10 +13,20 @@ public class UserInterface {
     public static int askForInt(String msg) {
         String input = JOptionPane.showInputDialog(null, msg);
         int x = 0;
-
+        if (input == null){
+            input = Integer.parseInt(input);
+            input = -2;
+            return input;
+        }
+        // if (!(input instanceof integer)) {
+        //     input = Integer.parseInt(input);
+        //     input = -1;
+        //     return input; 
+        // }
         while (true) {
-            if (input == null){
-                Runtime.getRuntime().halt(0);
+            if (input == -2) {
+                //Runtime.getRuntime().halt(0);
+                System.exit(0);
                 //break outerloop;
             }
             try {

@@ -5,7 +5,7 @@ public class HumanPlayer extends Player{
   public void HumanPlayer(String s) {
 	  
   }
-  public int takePins(Board b, int x) {
+  public void takePins(Board b, int x) {
     if (b.noPins - x <= 0) {
       JOptionPane.showMessageDialog(null, "computer won!");
       Runtime.getRuntime().halt(0);
@@ -13,7 +13,7 @@ public class HumanPlayer extends Player{
     }
     //System.out.println("Human chose HumanPlayer" + x);
     b.takePins(x);
-    return b.noPins;
+    //return b.noPins;
   }
 
 }

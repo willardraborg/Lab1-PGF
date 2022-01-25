@@ -9,7 +9,7 @@ public abstract class Player {
 	public String getUserId() {
 		return userId;
 	}
-	public abstract int takePins(Board b, int x);
+	public abstract void takePins(Board b, int x);
 
 	// public int takePins(Board b, int x) {
 	// 	b.takePins(x);

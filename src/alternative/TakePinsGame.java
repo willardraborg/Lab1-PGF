@@ -8,9 +8,10 @@ public class TakePinsGame {
 		JOptionPane.showMessageDialog(null, "human will now play a game of pins against computer.");
 		Board board = new Board();
 		board.setUp(10);
-		HumanPlayer human = new HumanPlayer();
-		human.Player("human");
-		ComputerPlayer computer = new ComputerPlayer();
+		Player turtle = new Turtle();
+	    //Player human = new HumanPlayer();
+		//human.Player("human");
+		Player computer = new ComputerPlayer();
 		computer.Player("computer");
 		
 		while (true) {
@@ -18,7 +19,8 @@ public class TakePinsGame {
 			int x = UserInterface.askForInt("Gimme pins");
 			int y = 0;
 			//System.out.println("human chose TakePinsGame:" + x);
-			human.takePins(board, x);
+			//human.takePins(board, x);
+			turtle.takePins(board, x);
 		    computer.takePins(board, y);
 		}
 	}
