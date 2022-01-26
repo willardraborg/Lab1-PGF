@@ -25,7 +25,8 @@ public class UserInterface {
                 return -1;
             }
             if (1 > x || x > 2) {
-                JOptionPane.showMessageDialog(null, "Chosen amount of pins is incorrect.");
+                JOptionPane.showMessageDialog(null, "Chosen amount of pins is incorrect. How many pins do you want to take? (1 or 2)");
+                input = JOptionPane.showInputDialog(null, msg);
             }
             else {
                 break;

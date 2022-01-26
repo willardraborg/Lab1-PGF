@@ -1,4 +1,5 @@
 package game;
+import javax.swing.JOptionPane;
 
 public class Board {
 	public int noPins;
@@ -10,7 +11,7 @@ public class Board {
 	
 	public void takePins(int x){
 		noPins = noPins - x;
-		System.out.println(noPins);
+		JOptionPane.showMessageDialog(null, noPins);
 	}
 	
 	public int getNoPins() {
